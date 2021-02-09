@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>지뢰찾기</title>
+        <style>
+            #table{
+                border-collapse: collapse;
+            }
+            #sec{
+                background: white;
+            }
+            td {
+                border : 1px solid #bbb;
+                width : 20px;
+                height : 20px;
+                background: #222;
+            }
+            #td2{
+                background: white;
+            }
+            td.opened{
+                background: white;
+            }
+            td.flag{
+                background: red;
+            }
+            td.question{
+                background: orange;
+            }
+        </style>
+    </head>
+    <body>
+    <p style="font-weight:bold">오른쪽 마우스 클릭시 <br>기존 지뢰찾기와 동일하게 느낌표 물음표 사용 가능<br>
+    모든 지뢰를 피해 칸을 모두 열면 승리</p>
+        <input id="hor" type="number" placeholder="가로크기입력" >
+        <input id="ver" type="number" placeholder="세로크기입력" >
+        <input id="mine" type="number" placeholder="지뢰개수입력" >
+        <button id="exec">실행</button>
+        <table id="table">
+            <thead>
+
+            </thead>
+        <tbody></tbody>
+        </table>
+        <div id="result"></div>
+        <script src="js/지뢰찾기.js"></script>
+
+    </body>
+</html>

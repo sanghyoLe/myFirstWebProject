@@ -1,0 +1,139 @@
+<html>
+
+<head>
+        <META charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> 이상효의 홈페이지 </title>
+
+        <STYLE Type="text/css">
+                body {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                                Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+
+                .slider {
+                        width: 100%;
+                        position: relative;
+                }
+
+                .slider_item {
+                        width: 100%;
+                        height: 500px;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        color: black;
+                        position: absolute;
+                        top: 10%;
+                        z-index: 0;
+                        opacity: 0;
+                        transition: all 0.5s ease-in-out;
+                        transform: scale(0.9);
+                }
+
+
+                .showing {
+                        z-index: 1;
+                        opacity: 1;
+                        transform: none;
+                }
+
+                button {
+                        cursor: pointer;
+                        background-color: gold;
+                        color: blanchedalmond;
+                        padding: 5px 0px;
+                        width: 150px;
+                        text-align: center;
+                        z-index: 1;
+                        position: absolute;
+                        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+                        border: 2px solid rgba(0, 0, 0, 0.2);
+                        color: rgba(0, 0, 0, 0.8);
+                        top: 400;
+                        right: 100;
+                        border-radius: 40px;
+                        font-size: 20px;
+                        font-family: sans-serif;
+                }
+
+
+                button:active {
+                        transform: scale(0.9);
+                }
+        </STYLE>
+</head>
+
+<body link="black" vlink="black" alink="black">
+
+
+
+
+        <div id="slider">
+
+                <div class="slider_item">
+                        <img src="images/photo.jpg" width="500" height="400" align="center" style="background:white">
+                </div>
+                <div class="slider_item">
+                        <p> 개인신상 </p>
+                        <li> 이름 : 이 상 효</li><br>
+                        <li> 나이 : 23살 </li><br>
+                        <li> 주소 : 서울 중구 황학동 </li><br>
+                        <li> 핸드폰 번호 : <u>010-5882-4284</u></li><br>
+                        <li>이메일 : gilsport1@gmail.com</li> <br>
+                        <li> 신장 : 173cm </li><br>
+                        <li> 취미 : 농구,드라마 시청 </li><br>
+                        <li> 장래희망 : full Stack develoer</li>
+
+                </div>
+
+                <div class="slider_item">
+                        <p>학력 사항</p>
+                        <li> 천현초등학교 2009년 졸업 </li>
+                        <li> 신장중학교 2012년 졸업 </li>
+                        <li> 신장고등학교 2015년 졸업 </li>
+                        <li> 건국대학교 글로컬 캠퍼스 컴퓨터공학과 재학중 </li>
+
+                </div>
+                <div class="slider_item">
+                        <p> 가족 사항</p>
+                        <li> 어머니</li>
+                        <li> 아버지</li>
+
+                </div>
+                <div class="slider_item">
+                        <p> IT 보유기술 </p>
+                        <li> c언어</li>
+                        <li> HTML,CSS </li>
+                        <li> JavaScript </li>
+                </div>
+                <button id="button">다음 </button>
+
+
+
+        </div>
+        <script>
+                const Showing_Class = "showing";
+                const firstSlide = document.querySelector(".slider_item:first-child");
+                const button = document.querySelector("#button");
+
+                function slide() {
+                        const currentSlide = document.querySelector(`.${Showing_Class}`);
+                        if (currentSlide) {
+                                currentSlide.classList.remove(Showing_Class);
+                                const nextSlide = currentSlide.nextElementSibling;
+                                if (nextSlide) {
+                                        nextSlide.classList.add(Showing_Class);
+                                } else {
+                                        firstSlide.classList.add(Showing_Class);
+                                }
+                        } else {
+                                firstSlide.classList.add(Showing_Class);
+                        }
+                }
+                button.addEventListener('click', slide);
+        </script>
+</body>
+
+</html>

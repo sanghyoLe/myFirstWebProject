@@ -1,0 +1,20 @@
+body {background-color : white;
+}
+table{table-layout: fixed;
+        border-collapse: collapse;
+        width:300; height:500; border-style:double; margin:auto;
+    }
+    a{text-decoration: none;
+        text-align: center;
+        font-size: 15pt;
+        font-weight: bold;
+        }
+    p{text-align:center;
+    font-weight: 900;
+    font-family: sans-serif;
+    font-size: 20pt;
+}
+ol{list-style-type: lower-roman;}
+
+
+

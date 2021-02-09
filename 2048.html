@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2048</title>
+        <style>
+            #table{border-collapse:collapse;
+            user-select:none;}
+            #table td{
+                    border: 5px solid black;
+                    width :80px;
+                    height: 80px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+
+                    }
+                    #score{
+                        user-select: none;
+                        font-size:40px;
+                    }
+                    #title{
+                        font-size:50px;
+                        font-weight: 900;
+                        user-select: none;
+                        color:red;
+                        position: relative;
+                        left:175px;
+                        line-height: 2;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id="title">2048!</div>
+        <div style="user-select: none">아직 오류많음..안될시 새로고침..</div>
+        <table id="table">
+
+        </table>
+        <div id="score">
+              0
+        </div>
+        <script src="js/2048.js">
+        </script>
+    </body>
+</html>
